@@ -2,14 +2,15 @@
 OS X screenshots uploader to Dropbox Public folder
 
 1) Create if not exists Public folder inside Dropbox:
-mkdir ~/Dropbox/Public
+`mkdir ~/Dropbox/Public`
 
 2)Set your screenshot location to Dropbox's Public folder
-defaults write com.apple.screencapture location ~/Dropbox/Public;killall SystemUIServer
+`defaults write com.apple.screencapture location ~/Dropbox/Public;killall SystemUIServer`
 
 3) Create new folder action for the Public folder using context menu on it
 
 4) Paste this AppleScript there.
+```
 on adding folder items to this_folder after receiving added_items
 	try
 		set the item_count to the number of items in the added_items
@@ -40,3 +41,4 @@ to switchText from t to r instead of s
 	set text item delimiters to d
 	t
 end switchText
+```
