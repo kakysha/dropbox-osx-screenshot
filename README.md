@@ -1,5 +1,5 @@
 # screenshot-2-dropbox
-OS X screenshots uploader to Dropbox Public folder
+OS X screenshots uploader to Dropbox Public folder and auto copy their direct URL.
 
 1) Create if not exists Public folder inside Dropbox:
 `mkdir ~/Dropbox/Public`
