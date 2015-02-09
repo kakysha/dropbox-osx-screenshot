@@ -8,7 +8,7 @@
 
 3) Create new folder action for the Public folder using context menu on it
 
-4) Paste this AppleScript there.
+4) Paste this AppleScript there, replacing **YOUR_USER_ID_HERE** with your real user id.
 ```
 on adding folder items to this_folder after receiving added_items
 	try
@@ -24,7 +24,7 @@ on adding folder items to this_folder after receiving added_items
 			
 			set theWebSafeFileName to switchText from theFileName to "%20" instead of " "
 			
-			set theURL to "http://dl.getdropbox.com/u/7401144/" & theWebSafeFileName
+			set theURL to "http://dl.getdropbox.com/u/YOUR_USER_ID_HERE/" & theWebSafeFileName
 			set the clipboard to theURL as text
 			do shell script "/usr/bin/terminal-notifier.app/Contents/MacOS/terminal-notifier -message " & theURL & " -title 'DropBox Link'"
 		end if
