@@ -8,13 +8,11 @@
 
 `defaults write com.apple.screencapture location ~/Dropbox/Public;killall SystemUIServer`
 
-3) Create new folder action for the Public folder using context menu on it
-
-4) Install `terminal-notifier` for notifications (optional, you can rely on dropbox tray icon displaying sync progress)
+3) Install `terminal-notifier` for notifications (optional, you can rely on dropbox tray icon displaying sync progress)
 
 `brew install terminal-notifier`
 
-4) Paste this AppleScript there, replacing **YOUR_USER_ID_HERE** with your real user id.
+4) Create new text file `/Library/Scripts/Folder Action Scripts/Dropbox - Copy Public Link.scpt` (under sudo) with the following text, replacing **YOUR_USER_ID_HERE** with your real DropBox user id:
 ```
 on adding folder items to this_folder after receiving added_items
 	try
@@ -47,3 +45,5 @@ to switchText from t to r instead of s
 	t
 end switchText
 ```
+
+5) Create new folder action for the Public folder using context menu on it and select newly created script.
