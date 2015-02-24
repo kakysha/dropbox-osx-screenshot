@@ -3,10 +3,15 @@
 1) Create if not exists Public folder inside Dropbox:
 `mkdir ~/Dropbox/Public`
 
-2)Set your screenshot location to Dropbox's Public folder
+2) Set your screenshot location to Dropbox's Public folder
+
 `defaults write com.apple.screencapture location ~/Dropbox/Public;killall SystemUIServer`
 
 3) Create new folder action for the Public folder using context menu on it
+
+4) Install `terminal-notifier` for notifications
+
+`brew install terminal-notifier`
 
 4) Paste this AppleScript there, replacing **YOUR_USER_ID_HERE** with your real user id.
 ```
@@ -26,7 +31,7 @@ on adding folder items to this_folder after receiving added_items
 			
 			set theURL to "http://dl.getdropbox.com/u/YOUR_USER_ID_HERE/" & theWebSafeFileName
 			set the clipboard to theURL as text
-			do shell script "/usr/bin/terminal-notifier.app/Contents/MacOS/terminal-notifier -message " & theURL & " -title 'DropBox Link'"
+			do shell script "terminal-notifier -message " & theURL & " -title 'DropBox Public Link'"
 		end if
 	end try
 end adding folder items to
