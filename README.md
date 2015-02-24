@@ -10,7 +10,7 @@
 
 3) Create new folder action for the Public folder using context menu on it
 
-4) Install `terminal-notifier` for notifications
+4) Install `terminal-notifier` for notifications (optional, you can rely on dropbox tray icon displaying sync progress)
 
 `brew install terminal-notifier`
 
