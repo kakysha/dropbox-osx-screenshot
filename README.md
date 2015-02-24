@@ -1,6 +1,7 @@
 # Mac OS X default screenshots are auto uploaded to Dropbox with direct link.
 
 1) Create if not exists Public folder inside Dropbox:
+
 `mkdir ~/Dropbox/Public`
 
 2) Set your screenshot location to Dropbox's Public folder
