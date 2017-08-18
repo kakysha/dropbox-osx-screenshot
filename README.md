@@ -1,3 +1,5 @@
+== UPDATE: NOT WORKING ANYMORE, DROPBOX DISABLED `Public` FOLDER FUNCTIONALITY ==
+
 # Mac OS X default screenshots are auto uploaded to Dropbox with direct link.
 
 1) Create if not exists Public folder inside Dropbox:
